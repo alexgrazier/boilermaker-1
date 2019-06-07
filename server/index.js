@@ -10,7 +10,14 @@ const sessionStore = new SequelizeStore({db})
 const PORT = process.env.PORT || 8080
 const app = express()
 const socketio = require('socket.io')
+const upload = require('./upload')
+const cors = require('cors')
 module.exports = app
+
+let corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200
+}
 
 // This is a global Mocha hook, used for resource cleanup.
 // Otherwise, Mocha v4+ never quits after tests.
@@ -62,6 +69,10 @@ const createApp = () => {
   )
   app.use(passport.initialize())
   app.use(passport.session())
+
+  app.use(cors(corsOptions))
+
+  app.post('/upload', upload)
 
   // auth and api routes
   app.use('/auth', require('./auth'))
