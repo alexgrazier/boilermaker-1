@@ -7,7 +7,6 @@ const Company = db.define('company', {
     allowNull: false,
     validate: {
       notEmpty: true
-      //unique?
     }
   },
   'Company Name': {
