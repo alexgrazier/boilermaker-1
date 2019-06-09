@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import '../public/Upload.css'
+// import styles from '../public/Upload.css'
 import Dropzone from './Dropzone'
 
 class Upload extends Component {

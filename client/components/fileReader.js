@@ -7,7 +7,7 @@ class FileReader extends React.Component {
     this.state = {
       csvfile: undefined
     }
-    let fileReader = new FileReader()
+
     this.updateData = this.updateData.bind(this)
   }
 
