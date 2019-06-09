@@ -1,5 +1,5 @@
 import React from 'react'
-import papaparse from 'papaparse'
+import papa from 'papaparse'
 
 class FileReader extends React.Component {
   constructor() {
@@ -19,15 +19,15 @@ class FileReader extends React.Component {
 
   importCSV = () => {
     const {csvfile} = this.state
-    Papa.parse(csvfile, {
+    papa.parse(csvfile, {
       complete: this.updateData,
       header: true
     })
   }
 
   updateData(result) {
-    var data = result.data
-    console.log(data)
+    let data = result.data
+    console.log('data', data)
   }
 
   render() {

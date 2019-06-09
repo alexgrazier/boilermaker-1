@@ -15,7 +15,7 @@ export class CompanyList extends React.Component {
         <div>
           {companies.map(company => {
             return (
-              <li key={company.Comments}>
+              <li key={company['Company ID']}>
                 Company: {company['Company Name']}, Share Price Date:{' '}
                 {company['Share Price Date']}, Share Price:{' '}
                 {company['Share Price']}, Comments: {company.Comments}
