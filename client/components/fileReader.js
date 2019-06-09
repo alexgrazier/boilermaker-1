@@ -1,6 +1,8 @@
 import React from 'react'
 import papa from 'papaparse'
 
+//still need to connect this updated data to backend, create put route to update database, then show the list of companies with the updated database info
+
 class FileReader extends React.Component {
   constructor() {
     super()

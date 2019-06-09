@@ -1,3 +1,5 @@
+//file not being used, separate process started for uploading file
+
 import React, {Component} from 'react'
 // import styles from '../public/Upload.css'
 import Dropzone from './Dropzone'

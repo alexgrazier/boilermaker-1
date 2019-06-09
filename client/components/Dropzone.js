@@ -1,3 +1,5 @@
+//not being used in this version
+
 import React, {Component} from 'react'
 // import './Dropzone.css'
 
